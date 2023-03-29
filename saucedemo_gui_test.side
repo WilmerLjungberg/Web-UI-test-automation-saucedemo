@@ -5,7 +5,7 @@
   "url": "https://www.saucedemo.com/",
   "tests": [{
     "id": "5fe27a24-ed48-4594-94e9-58c9ddf7ff84",
-    "name": "login",
+    "name": "standard_login",
     "commands": [{
       "id": "32b5f21a-f84f-4afd-ad82-940a7422fd3d",
       "comment": "",
@@ -109,62 +109,83 @@
     }]
   }, {
     "id": "d59a7f39-97fb-45a0-ac11-3212d6ac03e9",
-    "name": "locked_out_fail",
+    "name": "locked_out",
     "commands": [{
-      "id": "8e789e5e-184d-4044-9037-47908932fa70",
+      "id": "d007f467-fe1e-4e49-bbb5-cfdaaeabe663",
       "comment": "",
       "command": "open",
       "target": "https://www.saucedemo.com/",
       "targets": [],
       "value": ""
     }, {
-      "id": "a3a5290b-2815-4464-ac29-559578c144c7",
+      "id": "0020b182-db25-457c-85aa-4d4b72e6dbea",
       "comment": "",
       "command": "setWindowSize",
       "target": "1298x819",
       "targets": [],
       "value": ""
     }, {
-      "id": "19de4c99-3ee0-45c9-8157-3a6096907988",
+      "id": "9a875d67-8c89-4977-93bc-e1c12bb4b936",
       "comment": "",
       "command": "click",
-      "target": "id=login_credentials",
+      "target": "css=*[data-test=\"username\"]",
       "targets": [
-        ["id=login_credentials", "id"],
-        ["css=#login_credentials", "css:finder"],
-        ["xpath=//div[@id='login_credentials']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "7f92f168-ef2b-4e95-a07d-7d2de89e957b",
+      "id": "26470221-d2fd-4d01-91b8-1badc33fc955",
       "comment": "",
-      "command": "click",
-      "target": "id=login_credentials",
+      "command": "type",
+      "target": "css=*[data-test=\"username\"]",
       "targets": [
-        ["id=login_credentials", "id"],
-        ["css=#login_credentials", "css:finder"],
-        ["xpath=//div[@id='login_credentials']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
-      "value": ""
+      "value": "locked_out_user"
     }, {
-      "id": "77c15dfc-d124-4405-a814-9ac80f8dbd05",
+      "id": "4f255634-0c3e-4ff1-b450-49181fe5a02b",
       "comment": "",
-      "command": "doubleClick",
-      "target": "id=login_credentials",
+      "command": "type",
+      "target": "css=*[data-test=\"password\"]",
       "targets": [
-        ["id=login_credentials", "id"],
-        ["css=#login_credentials", "css:finder"],
-        ["xpath=//div[@id='login_credentials']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
       ],
-      "value": ""
+      "value": "secret_sauce"
     }, {
-      "id": "6602b7a7-53ed-49c4-8fd3-686925987f4e",
+      "id": "34fd06e5-440a-49d8-aaeb-fa4f4d5a1a21",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=*[data-test=\"password\"]",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aaa96a20-bd32-43eb-85c4-3c97aa2be99e",
       "comment": "",
       "command": "assertText",
       "target": "css=*[data-test=\"error\"]",
@@ -175,7 +196,7 @@
         ["xpath=//h3", "xpath:position"],
         ["xpath=//h3[contains(.,'Epic sadface: Sorry, this user has been locked out.')]", "xpath:innerText"]
       ],
-      "value": "Epic sadface: Sorry, this user has been locked out.\\n"
+      "value": "Epic sadface: Sorry, this user has been locked out."
     }]
   }],
   "suites": [{

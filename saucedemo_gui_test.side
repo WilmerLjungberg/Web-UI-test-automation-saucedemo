@@ -205,7 +205,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["d59a7f39-97fb-45a0-ac11-3212d6ac03e9", "5fe27a24-ed48-4594-94e9-58c9ddf7ff84"]
   }],
   "urls": ["https://www.saucedemo.com/"],
   "plugins": []

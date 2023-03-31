@@ -197,7 +197,7 @@
     }, {
       "id": "a988ce9a-3b1e-4548-ad2b-88987ebcc177",
       "comment": "",
-      "command": "assertElementPresent",
+      "command": "verifyElementPresent",
       "target": "xpath=//img[@alt='Sauce Labs Backpack'][@src=\"/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg\"]",
       "targets": [
         ["css=#item_4_img_link > .inventory_item_img", "css:finder"],

@@ -163,7 +163,7 @@
         ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "problem_user"
+      "value": "standard_user"
     }, {
       "id": "2c17f45c-8356-461e-94a9-3d08e700516d",
       "comment": "",

@@ -233,7 +233,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd"
+    "tests": ["fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd"]
   }],
   "urls": ["https://www.saucedemo.com/", "https://www.saucedemo.com/inventory.html"],
   "plugins": []

@@ -207,10 +207,10 @@
       ],
       "value": ""
     }, {
-      "id": "fa42c5e5-3836-4428-a56a-402d185cd04e",
+      "id": "17d40afe-7ac9-4bbf-b3c1-bca991d79ddf",
       "comment": "",
-      "command": "verifyElementPresent",
-      "target": "xpath=//a[@id='item_4_img_link']/img[@src=\"/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg\"]",
+      "command": "click",
+      "target": "xpath=//img[@alt='Sauce Labs Backpack']",
       "targets": [
         ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
         ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
@@ -218,6 +218,108 @@
         ["xpath=//a/img", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "2c8a3a85-057c-4b1c-8470-5e68670a20e1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[@alt='Sauce Labs Backpack'][@src=\"/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg\"]",
+      "targets": [
+        ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
+        ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
+        ["xpath=//a[@id='item_4_img_link']/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "679e4cf9-8d51-497a-a531-e38b18dcfa78",
+    "name": "prices",
+    "commands": [{
+      "id": "f0c6058d-89d8-4c0c-84c1-781569d36f62",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.saucedemo.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f22d987-f9d9-4150-8ccd-92ff36682b54",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"username\"]",
+      "targets": [
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "problem_user"
+    }, {
+      "id": "18e13576-92d2-431e-a859-00e7498d7b35",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"password\"]",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "secret_sauce"
+    }, {
+      "id": "ebeab139-f3ae-4180-8c01-1be273da02d0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=*[data-test=\"password\"]",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f9ea635a-cf30-4332-9429-c0be952de09a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.inventory_item:nth-child(1) .inventory_item_price",
+      "targets": [
+        ["css=.inventory_item:nth-child(1) .inventory_item_price", "css:finder"],
+        ["xpath=//div[@id='inventory_container']/div/div/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "$29.99"
+    }, {
+      "id": "04459204-2535-4542-9dd6-67a6e6b52f9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#item_4_img_link > .inventory_item_img",
+      "targets": [
+        ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
+        ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
+        ["xpath=//a[@id='item_4_img_link']/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e416c19d-b537-4e2f-a6bb-d4bf2ebb9b70",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.inventory_details_price",
+      "targets": [
+        ["css=.inventory_details_price", "css:finder"],
+        ["xpath=//div[@id='inventory_item_container']/div/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": "$29.99"
     }]
   }],
   "suites": [{
@@ -233,7 +335,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd"]
+    "tests": ["fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd", "679e4cf9-8d51-497a-a531-e38b18dcfa78"]
   }],
   "urls": ["https://www.saucedemo.com/", "https://www.saucedemo.com/inventory.html"],
   "plugins": []

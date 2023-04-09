@@ -79,6 +79,20 @@
       "target": "id=logout_sidebar_link",
       "targets": [],
       "value": ""
+    }, {
+      "id": "23584768-297c-43e6-88e2-1918a84ae9e4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.URL",
+      "targets": [],
+      "value": "aurl"
+    }, {
+      "id": "ccb7a7d2-746e-49eb-87e2-052c25f9c786",
+      "comment": "",
+      "command": "assert",
+      "target": "aurl",
+      "targets": [],
+      "value": "https://www.saucedemo.com/"
     }]
   }, {
     "id": "d59a7f39-97fb-45a0-ac11-3212d6ac03e9",
@@ -208,36 +222,36 @@
       "id": "a988ce9a-3b1e-4548-ad2b-88987ebcc177",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//img[@alt='Sauce Labs Backpack'][@src=\"/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg\"]",
+      "target": "xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)'][@src=\"/static/media/red-tatt-1200x1500.30dadef4.jpg\"]",
       "targets": [
-        ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
-        ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
-        ["xpath=//a[@id='item_4_img_link']/img", "xpath:idRelative"],
-        ["xpath=//a/img", "xpath:position"]
+        ["css=#item_3_img_link > .inventory_item_img", "css:finder"],
+        ["xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)']", "xpath:img"],
+        ["xpath=//a[@id='item_3_img_link']/img", "xpath:idRelative"],
+        ["xpath=//div[6]/div/a/img", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "17d40afe-7ac9-4bbf-b3c1-bca991d79ddf",
       "comment": "",
       "command": "click",
-      "target": "xpath=//img[@alt='Sauce Labs Backpack']",
+      "target": "xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)']",
       "targets": [
-        ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
-        ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
-        ["xpath=//a[@id='item_4_img_link']/img", "xpath:idRelative"],
-        ["xpath=//a/img", "xpath:position"]
+        ["css=#item_3_img_link > .inventory_item_img", "css:finder"],
+        ["xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)']", "xpath:img"],
+        ["xpath=//a[@id='item_3_img_link']/img", "xpath:idRelative"],
+        ["xpath=//div[6]/div/a/img", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "2c8a3a85-057c-4b1c-8470-5e68670a20e1",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//img[@alt='Sauce Labs Backpack'][@src=\"/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg\"]",
+      "target": "xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)'][@src=\"/static/media/red-tatt-1200x1500.30dadef4.jpg\"]",
       "targets": [
-        ["css=#item_4_img_link > .inventory_item_img", "css:finder"],
-        ["xpath=//img[@alt='Sauce Labs Backpack']", "xpath:img"],
-        ["xpath=//a[@id='item_4_img_link']/img", "xpath:idRelative"],
-        ["xpath=//a/img", "xpath:position"]
+        ["css=.inventory_details_img", "css:finder"],
+        ["xpath=//img[@alt='Test.allTheThings() T-Shirt (Red)']", "xpath:img"],
+        ["xpath=//div[@id='inventory_item_container']/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/img", "xpath:position"]
       ],
       "value": ""
     }]
@@ -555,16 +569,15 @@
       "id": "bdb98513-3112-4086-b300-404a0bdc3940",
       "comment": "",
       "command": "click",
-      "target": "css=*[data-test=\"add-to-cart-sauce-labs-backpack\"]",
+      "target": "css=*[data-test=\"add-to-cart-sauce-labs-bike-light\"]",
       "targets": [
-        ["css=*[data-test=\"add-to-cart-sauce-labs-backpack\"]", "css:data-attr"],
-        ["id=add-to-cart-sauce-labs-backpack", "id"],
-        ["name=add-to-cart-sauce-labs-backpack", "name"],
-        ["css=#add-to-cart-sauce-labs-backpack", "css:finder"],
-        ["xpath=//button[@id='add-to-cart-sauce-labs-backpack']", "xpath:attributes"],
-        ["xpath=//div[@id='inventory_container']/div/div/div[2]/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+        ["css=*[data-test=\"add-to-cart-sauce-labs-bike-light\"]", "css:data-attr"],
+        ["id=add-to-cart-sauce-labs-bike-light", "id"],
+        ["name=add-to-cart-sauce-labs-bike-light", "name"],
+        ["css=#add-to-cart-sauce-labs-bike-light", "css:finder"],
+        ["xpath=//button[@id='add-to-cart-sauce-labs-bike-light']", "xpath:attributes"],
+        ["xpath=//div[@id='inventory_container']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/button", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -640,12 +653,19 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "8c490842-0be9-45a9-b7d5-b044c05de47b",
+      "id": "19d4d13d-282a-4ded-ac4f-695a499385bd",
       "comment": "",
-      "command": "assertText",
-      "target": "xpath=//div[@id='checkout_complete_container']/h2",
+      "command": "executeScript",
+      "target": "return document.URL",
       "targets": [],
-      "value": "Thank you for your order!"
+      "value": "aurl"
+    }, {
+      "id": "c208aea2-806a-4ecf-b4bf-0727dba9c42d",
+      "comment": "",
+      "command": "assert",
+      "target": "aurl",
+      "targets": [],
+      "value": "https://www.saucedemo.com/checkout-complete.html"
     }]
   }],
   "suites": [{
@@ -654,14 +674,14 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["d59a7f39-97fb-45a0-ac11-3212d6ac03e9", "174f76d4-6939-4daf-b46a-970c08aebb33"]
+    "tests": ["174f76d4-6939-4daf-b46a-970c08aebb33", "d59a7f39-97fb-45a0-ac11-3212d6ac03e9"]
   }, {
     "id": "0d3709db-d3d3-4724-ba0c-dc058666eeea",
     "name": "Problems",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd", "679e4cf9-8d51-497a-a531-e38b18dcfa78", "5fe27a24-ed48-4594-94e9-58c9ddf7ff84", "a049b0c7-96db-4a2e-ab15-19164205bbcd", "64337411-f665-4175-969c-5528af71ba2d"]
+    "tests": ["5fe27a24-ed48-4594-94e9-58c9ddf7ff84", "a049b0c7-96db-4a2e-ab15-19164205bbcd", "fdad7874-8c98-4cfc-b5ca-a9ee956f7cdd", "679e4cf9-8d51-497a-a531-e38b18dcfa78", "64337411-f665-4175-969c-5528af71ba2d"]
   }],
   "urls": ["https://www.saucedemo.com/", "https://www.saucedemo.com/inventory.html"],
   "plugins": []

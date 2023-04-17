@@ -313,13 +313,9 @@
     }, {
       "id": "f9ea635a-cf30-4332-9429-c0be952de09a",
       "comment": "",
-      "command": "assertText",
+      "command": "verifyText",
       "target": "css=.inventory_item:nth-child(1) .inventory_item_price",
-      "targets": [
-        ["css=.inventory_item:nth-child(1) .inventory_item_price", "css:finder"],
-        ["xpath=//div[@id='inventory_container']/div/div/div[2]/div[2]/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/div/div[2]/div[2]/div", "xpath:position"]
-      ],
+      "targets": [],
       "value": "$29.99"
     }, {
       "id": "04459204-2535-4542-9dd6-67a6e6b52f9c",
@@ -336,13 +332,9 @@
     }, {
       "id": "e416c19d-b537-4e2f-a6bb-d4bf2ebb9b70",
       "comment": "",
-      "command": "assertText",
+      "command": "verifyText",
       "target": "css=.inventory_details_price",
-      "targets": [
-        ["css=.inventory_details_price", "css:finder"],
-        ["xpath=//div[@id='inventory_item_container']/div/div/div[2]/div[3]", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]", "xpath:position"]
-      ],
+      "targets": [],
       "value": "$29.99"
     }]
   }, {

@@ -659,6 +659,10 @@
       "targets": [],
       "value": "https://www.saucedemo.com/checkout-complete.html"
     }]
+  }, {
+    "id": "2ecc093b-b9f0-4889-8789-358bb2b29ffc",
+    "name": "tsetetet",
+    "commands": []
   }],
   "suites": [{
     "id": "a68ed30d-9246-4fc9-a265-3e06d8c87f4a",
